@@ -31,7 +31,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserResponseDto getById(Long id) {
+    public UserResponseDto getById(long id) {
         User user = repository.findById(id)
                 .orElseThrow(() -> new UserNotFoundException(id));
 
